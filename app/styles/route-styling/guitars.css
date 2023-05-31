@@ -1,0 +1,84 @@
+.guitars-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+@media (min-width: 768px){
+    .guitars-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 992px){
+    .guitars-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.guitar{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+.guitar .content{
+    padding: 1rem;
+}
+
+.guitar .content h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+/* Cut text to 4 lines and add ... */
+.guitar .description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+.guitar .price{
+    color: var(--primary);
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.form select{
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--black);
+}
+
+.form input[type="submit"]{
+    margin-top: 3rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 1.4rem;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.form input[type="submit"]:hover{
+    cursor:pointer;
+    background-color: var(--primary);
+}

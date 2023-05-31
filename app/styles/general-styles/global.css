@@ -1,0 +1,239 @@
+@import 'variables.css';
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 2rem;
+    font-family: var(--fuente-principal);
+    line-height: 1.5;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  [class*="container"], 
+  main {
+    width: min(95%, 120rem);
+    margin: 3rem auto;
+  }
+  
+  [class*="heading"] {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 5rem 0;
+  }
+
+/*** Header ***/
+
+.header{
+  background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 /.7)), url(/img/header.jpg);
+  padding: 6rem 0;
+  background-size: cover;
+}
+
+.header .logo{
+  width: 25rem;
+}
+
+.bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px){
+  .bar{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.header .navigation{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px){
+  .header .navigation{
+    margin-top: 5rem;
+  }
+}
+
+.header .navigation a img{
+  width: 3rem;
+  transition-property: filter;
+  transition-duration: 300ms;
+}
+
+.header .navigation a img:hover,
+.header .navigation a .active{
+  /* box-shadow: 0 0 4rem var(--primary), 0 0 3rem var(--primary), 0 0 2rem var(--primary), 0 0 1rem var(--primary); */
+  filter: drop-shadow(0 0 0.75rem  var(--primary)) drop-shadow(0 0 1rem var(--primary)) drop-shadow(0 0 1.25rem var(--primary));
+}
+
+@media (min-width: 768px){
+  .header .navigation{
+    margin-top: 0rem;
+  }
+}
+
+.header .navigation a{
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.4rem;
+  padding: .5rem;
+  transition-property: text-shadow;
+  transition-duration: 300ms;
+}
+
+.header .navigation a:hover, 
+.header .navigation .active{
+  text-shadow: 0 0 4rem var(--primary), 0 0 3rem var(--primary), 0 0 2rem var(--primary), 0 0 1rem var(--primary);
+}
+
+
+/** Footer **/
+
+.footer{
+  background-color: var(--black);
+  padding: 5rem 0;
+  margin-top: 5rem;
+}
+
+.footer .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px){
+  .footer .content{
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+}
+
+.footer .navigation{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer .navigation img{
+  display: none;
+}
+
+.footer .navigation a, .footer .copyright {
+  color: var(--white);
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 700;
+
+}
+
+.footer .copyright{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.error, .error-link-to{
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+.error{
+  font-size: 2.5rem;
+}
+
+.error-link-to{
+  display: block;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.link-to{
+  margin-top: 2rem;
+  display: block;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  white-space: nowrap;
+}
+
+.link-to:hover{
+  background-color: var(--primary);
+}
+
+/** Helpers **/
+
+.mt5{
+  margin-top: 5rem;
+}
+
+/** Language Toggle - EN/ES **/
+
+.right-align{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px){
+  .right-align{
+      margin: 0 0 1rem 0;
+      justify-content: flex-end;
+  }
+}
+.switch-button {
+  display: inline-flex;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  position: relative;
+}
+
+.switch-button-checkbox {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.switch-button span{
+  color: gray;
+  padding: 1rem 0;
+}
+
+.switch-button-label{
+  color: gray;
+  padding: 1rem .5rem;
+}
+
+.switch-button-label.selected{
+  color: white;
+  text-shadow: 0 0 1rem var(--primary), 0 0 1rem var(--primary), 0 0 1rem var(--primary), 0 0 1rem var(--primary);
+}

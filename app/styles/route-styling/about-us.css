@@ -1,0 +1,11 @@
+.about-us .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+}
+
+@media (min-width: 768px){
+    .about-us .content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
