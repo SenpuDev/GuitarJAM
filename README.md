@@ -4,9 +4,9 @@
   <p align="center">:arrow_up: Click on image to see deployed app on vercel :arrow_up:</p>
   
  ## App description:
-Built with React - Remix Run. Simulation of a guitar store with dynamic content fetched from the Strapi API. 
+Built with React - Remix Run. Simulation of a guitar store with dynamic content fetched from a own Strapi API. 
 It uses server-side rendering to update meta tags and retrieve necessary information for each route.
-Available in both English and Spanish, with content that can vary thanks to the implementation of 'Internationalization' in Strapi.
+Available in both English and Spanish, with content that can vary dinamically thanks to the implementation of 'Internationalization'.
  
  ✅ Responsive web design <br>
  ✅ SEO optimization thanks to dinamic meta info <br>
