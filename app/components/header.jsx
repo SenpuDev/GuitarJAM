@@ -15,7 +15,7 @@ const Header = () => {
     <header className='header'>
       <div className='container bar'>
         <div className='logo'>
-          <Link to='/'>
+          <Link to={language !== 'en' ? `/?translate=${language}` : '/'}>
             <img src={language === 'en' ? guitarJamImageEN : guitarJamImageES} alt='GuitarJam logo' />
           </Link>
         </div>
